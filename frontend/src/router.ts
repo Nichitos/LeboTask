@@ -1,8 +1,12 @@
 import Vue from 'vue';
 import Router from 'vue-router';
-import AdminView from './views/AdminView.vue';
-import EmployeeView from './views/EmployeeView.vue';
-import LoginView from './views/LoginView.vue';
+import AdminView from './views/adminViews/AdminView.vue';
+import EmployeeView from './views/employeeViews/EmployeeView.vue';
+import LoginView from './views/otherViews/LoginView.vue'
+import aUsersView from './views/adminViews/adminUsersView.vue';
+import aPersonnelView from './views/adminViews/adminPersonnelView.vue';
+import aSystemView from './views/adminViews/adminSystemView.vue';
+
 
 Vue.use(Router);
 
@@ -23,10 +27,31 @@ export default new Router({
       meta: {transitionName: 'slide'},
     },
     {
-      path: '/admin',
+      path: '/admin/',
       name: 'admin',
       component: AdminView,
       meta: {transitionName: 'slide'},
+      children: [
+        {
+          path: '',
+          name: 'users',
+          component: aUsersView,
+          meta: {transitionName: 'slide'},
+        },
+        {
+          path: '/system',
+          name: 'system',
+          component: aSystemView,
+          meta: {transitionName: 'slide'},
+        },
+        {
+          path: '/personnel',
+          name: 'personnel',
+          component: aPersonnelView,
+          meta: {transitionName: 'slide'},
+        },
+      ],
     },
+    
   ],
 });

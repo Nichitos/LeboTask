@@ -22,9 +22,9 @@
 </template>
 
 <script lang="ts">
-import deadlineComp from '../components/deadlineComponent.vue'
-import empInfoComp from '../components/empInfoComponent.vue'
-import tasksComp from '../components/tasksComponent.vue'
+import deadlineComp from '@/components/deadlineComponent.vue'
+import empInfoComp from '@/components/empInfoComponent.vue'
+import tasksComp from '@/components/tasksComponent.vue'
 
 export default {
   name: 'EmployeeView',

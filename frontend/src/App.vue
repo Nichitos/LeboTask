@@ -7,9 +7,9 @@
 </template>
 
 <script>
-import AdminView from './views/AdminView.vue';
-import EmployeeView from './views/EmployeeView.vue';
-import LoginView from './views/LoginView.vue';
+import AdminView from './views/adminViews/AdminView.vue';
+import EmployeeView from './views/employeeViews/EmployeeView.vue';
+import LoginView from './views/otherViews/LoginView.vue';
 import Footer from './components/footer'
 
 export default {

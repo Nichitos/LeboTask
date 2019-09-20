@@ -8,8 +8,8 @@
 </template>
 
 <script lang="ts">
-import SignUpComp from '../components/signupComponent.vue'
-import LoginComp from '../components/loginComponent.vue'
+import SignUpComp from '@/components/signupComponent.vue'
+import LoginComp from '@/components/loginComponent.vue'
 
 export default {
   name: "LoginView",
